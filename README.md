@@ -1,3 +1,4 @@
 # Data Engineering Project: End-to-end Hadoop
 ## Getting Start
-### Set-up Google Compute Engine (Optional)
+### Seting-up Google Compute Engine (Optional)
+
