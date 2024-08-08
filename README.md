@@ -7,6 +7,9 @@ This project aims to create a data pipeline for a coffee shop using Hadoop archi
 ### Hadoop System Design
 <img src="picture/hadoop-system-design.png" width=100% height=40%>
 
+- Batch Layer: Handles offline data processing tasks, typically for historical data
+- Speed Layer: Deals with real-time data processing
+
 ## Getting Start
 ### Seting-up Google Compute Engine (Optional)
 
