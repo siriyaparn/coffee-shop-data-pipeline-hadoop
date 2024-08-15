@@ -10,6 +10,10 @@ This project aims to create a data pipeline for a coffee shop using Hadoop archi
 - Batch Layer: Handles offline data processing tasks, typically for historical data
 - Speed Layer: Deals with real-time data processing
 
+### Batch Layer Workflow
+
+### Speed Layer Workflow
+
 ## Getting Start
 ### Seting-up Google Compute Engine (Optional)
 
