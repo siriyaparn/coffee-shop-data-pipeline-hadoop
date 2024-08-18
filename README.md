@@ -24,6 +24,22 @@ This project aims to create a data pipeline for a coffee shop using Hadoop ecosy
 - Tables: Customer data is stored in Hive tables for further analysis or reporting.
 
 ## Speed Layer Workflow
+### Data Collection
+- Source System: Log files are generated from a source system containing transaction data when a customer places an order.
+- Flume: Flume is used to collect, aggregate, and move log data into the Hadoop ecosystem.
+- HDFS: Log data is stored in HDFS.
+- HBASE: Data is stored in HBase, a NoSQL database optimized for fast read/write operations.
+
+### Data Processing
+- Spark Streaming: Real-time data is processed using Spark Streaming.
+- HIVE: Data is transformed and queried using Hive.
+
+### Output
+- Tables: Transaction data is stored in Hive tables for further analysis or reporting.
+
+### Automated workflow with Apache Oozie
+- Join customer data and transaction data on the customer ID (id) to create a table suitable for calculating membership points.
+- Set the scheduler to create and save a new table each day by running workflows daily.
 
 ## Getting Start
 ### Seting-up Google Compute Engine (Optional)
