@@ -43,4 +43,7 @@ This project aims to create a data pipeline for a coffee shop using Hadoop ecosy
 
 ## Getting Start
 ### Seting-up Google Compute Engine (Optional)
-
+**1. Provision GCP Compute Engine for Docker**
+- Machine configuration : `n2-standard-4(4vCPU, 16GB memory)`
+- Boot disk : `Ubuntu 20.04 LTS, size 40GB`
+- Allow HTTP,HTTPS traffic
