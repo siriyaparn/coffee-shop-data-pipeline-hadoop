@@ -42,8 +42,30 @@ This project aims to create a data pipeline for a coffee shop using Hadoop ecosy
 - Set the scheduler to create and save a new table each day by running workflows daily.
 
 ## Getting Start
-### Seting-up Google Compute Engine (Optional)
+### Setting-up Google Compute Engine (Optional)
 **1. Provision GCP Compute Engine for Docker**
 - Machine configuration : `n2-standard-4(4vCPU, 16GB memory)`
 - Boot disk : `Ubuntu 20.04 LTS, size 40GB`
-- Allow HTTP,HTTPS traffic
+- Allow HTTP, HTTPS traffic
+  
+**2. Setting-up Firewall Rule**
+- Allow on match : `Allow`
+- Source filter : `IPv4 ranges`
+- Source IPv4 ranges : `0.0.0.0/0`
+- Protocols and ports : specified > tcp > `7180,8888`
+
+**3. Install Docker on Ubuntu**
+- Install Docker on Ubuntu 20.04 following steps 1-4 from Digital Ocean's Guide > [Here](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04)
+- Once the installation is complete, use the command to pull the Docker image to your VM.
+```sh
+docker pull mikelemikelo/cloudera-spark:latest
+```
+- Run a container from the mikelemikelo/cloudera-spark:latest image with specific configurations.
+```sh
+docker run --hostname=quickstart.cloudera --privileged=true -it -p 8888:8888 -p
+8080:8080 -p 7180:7180 -p 88:88/udp -p 88:88 mikelemikelo/cloudera-spark:latest /usr/bin/docker-quickstart-light
+```
+- Use the command to start Cloudera Manager.
+```sh
+sudo /home/cloudera/cloudera-manager --express && service ntpd start
+```
