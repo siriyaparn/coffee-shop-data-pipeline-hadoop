@@ -54,7 +54,7 @@ This project aims to create a data pipeline for a coffee shop using Hadoop ecosy
 - Source IPv4 ranges : `0.0.0.0/0`
 - Protocols and ports : specified > tcp > `7180,8888`
 
-**3. Install Docker on Ubuntu**
+**3. Getting Started with Cloudera Hadoop via a Docker Container**
 - Install Docker on Ubuntu 20.04 following steps 1-4 from Digital Ocean's Guide > [Here](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04)
 - Once the installation is complete, use the command to pull the Docker image to your VM.
 ```sh
@@ -69,3 +69,10 @@ docker run --hostname=quickstart.cloudera --privileged=true -it -p 8888:8888 -p
 ```sh
 sudo /home/cloudera/cloudera-manager --express && service ntpd start
 ```
+
+- Use the Public/External IP of the VM to access Cloudera Manager on port `7180`, for example, `http://34.87.136.199:7180/`.
+- Before starting the cluster, go to the Hive search on the left and set the default configuration to `None`.
+- Remove any unused and unnecessary services, such as `Spark` and `KV Indexer`.
+- Add `Flume` service
+- Start the cluster and wait until the service reaches an `all-up-and-running` status.
+- Log in to Cloudera HUE using the VM's Public/External IP on port `8888`, for example, `http://34.87.136.199:8888/`.
