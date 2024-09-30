@@ -37,7 +37,7 @@ This project aims to create a data pipeline for a coffee shop using Hadoop ecosy
 ### Output
 - Tables: Transaction data is stored in Hive tables for further analysis or reporting.
 
-### Automated workflow with Apache Oozie
+## Automated workflow with Apache Oozie
 - Join customer data and transaction data on the customer ID (id) to create a table suitable for calculating membership points.
 - Set the scheduler to create and save a new table each day by running workflows daily.
 
